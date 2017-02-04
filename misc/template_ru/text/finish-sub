@@ -1,0 +1,30 @@
+Subject: Добро пожаловать в $list$@$domain$
+
+%text prologue%
+
+%wrap%
+%ifreason request%
+  Благодарим Вас за запрос на добавление в список рассылки.
+%endif%
+%ifreason confirm%
+  Благодарим Вас за подтверждение вступления в список рассылки.
+%endif%
+%ifreason permit%
+  A gatekeeper has permitted you to join us.
+%endif%
+%ifreason switch%
+  Ваша подписка была изменена на
+%else%
+  %ifreason admin%
+    Администратор подписал Вас
+  %else%
+    Вы были добавлены к
+  %endif%
+%endif%
+%iftype normal% нормальной %endif%
+%iftype digest% дайджест %endif%
+%iftype nomail% no-mail %endif%
+версии листа.
+
+%wrap%Ваш e-mail, который был добавлен <$subaddr$>.
+

@@ -1,0 +1,2 @@
+if $message_body contains "DISCARD_THIS_MAIL" and not error_message
+then seen finish endif

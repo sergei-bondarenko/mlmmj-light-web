@@ -1,0 +1,41 @@
+Subject: Please moderate $list$@$domain$: $subject$
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+ boundary="=_$random0$$random1$_="
+Content-Transfer-Encoding: 8bit
+
+--=_$random0$$random1$_=
+Content-Type: text/plain; charset=utf8
+Content-Transfer-Encoding: 8bit
+
+%text prologue%
+
+%wrap%A message from <$posteraddr$> with subject "$subject$" has been
+submitted for posting. You are being asked to moderate
+%ifreason modnonsubposts%
+  because the requester is not a subscriber.
+%endif%
+%ifreason moderated%
+  because this is a moderated list.
+%endif%
+%ifreason access%
+  because of an access rule.
+%endif%
+The message is below.
+
+%wrap%To release it to the list, please send a message to <$releaseaddr$>
+which can usually be done simply by replying to this message.
+
+%wrap%If you do not want to do any of this, either send a message to
+<$rejectaddr$> or simply ignore this message.
+
+The following moderators have received this mail:
+- %moderators%
+
+--=_$random0$$random1$_=
+Content-Type: message/rfc822
+Content-Transfer-Encoding: 8bit
+Content-Disposition: inline; filename="message.eml"
+
+%originalmail%
+--=_$random0$$random1$_=--

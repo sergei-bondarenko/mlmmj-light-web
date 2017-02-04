@@ -1,0 +1,41 @@
+%ifaction sub%Subject: Subscribed to $list$@$domain$: $subaddr$%endif%
+%ifaction unsub%Subject: Unsubscribed from $list$@$domain$: $subaddr$%endif%
+
+%text prologue%
+
+%ifaction sub%
+  %^%%wrap%The address <$subaddr$> has been subscribed to the
+  %iftype normal% normal %endif%
+  %iftype digest% digest %endif%
+  %iftype nomail% no-mail %endif%
+  version of the list
+  %ifreason request%
+    because a request to join was received.
+  %endif%
+  %ifreason confirm%
+    because a request to join was confirmed.
+  %endif%
+  %ifreason admin%
+    because an administrator commanded it.
+  %endif%
+  %ifreason permit%
+    because a gatekeeper permitted it.
+  %endif%
+%endif%
+
+%ifaction unsub%
+  %^%%wrap%The address <$subaddr$> has been unsubscribed from the list
+  %ifreason request%
+    because a request to unsubscribe was received.
+  %endif%
+  %ifreason confirm%
+    because a request to unsubscribe was confirmed.
+  %endif%
+  %ifreason admin%
+    because an administrator commanded it.
+  %endif%
+  %ifreason bouncing%
+    because it has been bouncing for too long.
+  %endif%
+%endif%
+

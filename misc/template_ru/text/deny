@@ -1,0 +1,35 @@
+%ifaction sub%Subject: Невозможно подписаться на $list$@$domain$%endif%
+%ifaction unsub%Subject: Невозможно отписаться от $list$@$domain$%endif%
+%ifaction release reject%Subject: Невозможно модерировать $list$@$domain$%endif%
+
+%text prologue%
+
+%ifaction unsub%
+  %^%%wrap%Вы не можете отписаться от листа рассылки
+  %ifreason unsubbed%
+    потому что Вы не подписаны.
+
+    %^%%wrap%Если Вы получаете сообщения, возможно, подписан другой email.
+    Чтобы узнать, какой адрес подписан, обратитесь к письму-приветствию
+    о начале подписки, либо обратите внимание на поле "Return-Path" сообщений,
+    которые Вы получаете из рассылки.
+  %endif%
+%endif%
+
+%ifaction release reject%
+  %^%%wrap%
+  %ifaction release%
+    Вы не можете одобрить публикацию сообщения
+  %endif%
+  %ifaction reject%
+    Вы не можете запретить публикацию сообщения
+  %endif%
+  %ifreason notfound%
+    потому что оно не найдено. Возможно, потому что другой модератор
+    уже одобрил или запретил, или время ожидания истекло.
+  %endif%
+  %ifreason moderators%
+    потому что Вы не модератор рассылки.
+  %endif%
+%endif%
+

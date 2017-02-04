@@ -1,0 +1,88 @@
+Subject: Information for $list$@$domain$
+
+%text prologue%
+
+Here is some information about the list.
+
+You can subscribe to the following versions:
+
+- %wrap%The normal version: Every time a post is sent to the list,
+subscribers receive a copy of it.
+%ifcontrol closedlist closedlistsub%
+  Subscribe by contacting a list administrator.
+%else%
+  Subscribe by emailing <$list+$subscribe@$domain$>.
+%endif%
+
+%ifncontrol nodigestsub%
+  %^%- %wrap%The digest version: Subscribers receive multiple posts in a
+  single mail message, at regular intervals, or when a lot of posts have
+  accumulated.
+  %ifcontrol closedlist closedlistsub%
+    Subscribe by contacting a list administrator.
+  %else%
+    Subscribe by emailing <$list+$subscribe-digest@$domain$>.
+  %endif%
+%endif%
+
+%ifncontrol nonomailsub%
+  %^%- %wrap%The no-mail version: Subscribers do not receive any posts to
+  the list. This means, though, they are able to post to a list which only
+  subscribers may post to, while they follow the list using a web archive or
+  another subscribed email address.
+  %ifcontrol closedlist closedlistsub%
+    Subscribe by contacting a list administrator.
+  %else%
+    Subscribe by emailing <$list+$subscribe-nomail@$domain$>.
+  %endif%
+%endif%
+
+%ifcontrol submod%
+  %^%%wrap%The list has gatekeepers who will review subscription requests
+  before permitting new members.
+%endif%
+
+%ifcontrol closedlist%
+  %^%%wrap%Unsubscribe by contacting a list administrator.
+%else%
+  %^%%wrap%Unsubscribe by emailing <$list+$unsubscribe@$domain$>.
+%endif%
+
+%wrap%Posts are made by emailing <$list$@$domain$>.
+
+%ifcontrol subonlypost%%ifncontrol modnonsubposts%
+  %^%%wrap%However, only subscribers may post to the list.
+%endif%%endif%
+
+%ifcontrol moderated%
+  %^%%wrap%The list has moderators who will review all posts before
+  releasing them to the list.
+%else%
+  %ifcontrol subonlypost%%ifcontrol modnonsubposts%
+    %^%%wrap%The list has moderators who will review posts from
+    non-subscribers before releasing them to the list.
+  %endif%%endif%
+%endif%
+
+%ifcontrol access%
+  %^%%wrap%The list also has access rules which may affect who can post and
+  which posts are moderated.
+%endif%
+
+%ifncontrol noget%%ifncontrol noarchive%
+  %^%%wrap%
+  %ifcontrol subonlyget%
+    Anyone
+  %else%
+    Subscribers
+  %endif%
+  can retrieve message number N from the list's archive by sending a message
+  to <$list+$get-N@$domain$> (change the N to the number of the desired
+  message).
+%endif%%endif%
+
+%wrap%You can retrieve the frequently asked questions document for the list
+by sending a message to <$list+$faq@$domain$>.
+
+%wrap%To contact the list owner, send a message to <$list+$owner@$domain$>.
+

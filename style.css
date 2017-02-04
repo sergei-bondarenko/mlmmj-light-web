@@ -1,0 +1,499 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    color: #222222;
+    height: 100%;
+}
+
+form
+{
+    margin: 0;
+    padding: 0;
+}
+
+a
+{
+    margin-top: 0;
+    margin-bottom: 0;
+    cursor: pointer;
+    color: #000099;
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: #66ccff;
+}
+
+td
+{
+    padding-right: 8px;
+}
+
+#header
+{
+    font-size: 30px;
+    background-color: #222222;
+    color: #9d9d9d;
+    font-family: sans-serif;
+    font-weight: bold;
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    border-bottom: 4px solid #3a79bc;
+    display: flex;
+    justify-content: space-between;
+}
+
+#error
+{
+    padding-top: 15px;
+    padding-left: 30px;
+}
+
+#header_left
+{
+    float: left;
+}
+
+#header_right
+{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+#header_right a
+{
+    color: #9d9d9d;
+}
+
+
+#header_right a:hover
+{
+    color: #66ccff;
+}
+
+#login
+{
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    bottom: 0;
+    display: flex;
+}
+
+#login_form
+{
+    width: 250px;
+    padding: 10px;
+    margin: auto;
+    align-self: center;
+}
+
+#domain, #password
+{
+    width: 100%;
+    padding-bottom: 5px;
+    display: flex;
+}
+
+#domain_left, #password_left
+{
+    align-self: center;
+}
+
+#domain_right, #password_right
+{
+    margin-left: auto;
+}
+
+#domain_input, #password_input
+{
+    width: 170px;
+}
+
+#enter
+{
+    padding-top: 5px;
+    display: inline-block;
+    margin-left: 80px;
+}
+
+#breadcrumbs
+{
+    height: 40px;
+    background-color: #f5f5f5;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+#index
+{
+    margin-left: 30px;
+}
+
+#lists_header
+{
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#lists
+{
+    padding-left: 17px;
+    margin-bottom: 5px;
+}
+
+#add_list
+{
+    display: flex;
+    padding-left: 20px;
+}
+
+#add_list_input
+{
+    width: 170px;
+}
+
+.tooltip
+{
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .help_add_list
+{
+    visibility: hidden;
+    width: 450px;
+    background-color: #111;
+    color: #fff;
+    text-align: left;
+    border-radius: 0 6px 6px 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    top: 3px;
+    left: 170%;
+}
+
+.tooltip .help_add_list::after
+{
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #111 transparent transparent;
+}
+
+.tooltip:hover .help_add_list
+{
+    visibility: visible;
+}
+
+#edit_page
+{
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+#save_list
+{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
+    margin-right: 30px;
+    height: calc(100% - 170px);
+    min-height: 400px;
+    width: calc(100% - 60px);
+}
+
+#column_left
+{
+    height: 100%;
+    display: table-cell;
+    min-width: 300px;
+}
+
+#subscribers_header
+{
+    height: 30px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+
+#subscribers_body
+{
+    height: calc(100% - 100px);
+    width: 300px;
+    margin-left: auto;
+}
+
+#subscribers
+{
+    height: 100%;
+    width: 100%;
+}
+
+#column_right
+{
+    height: 100%;
+    display: table-cell;
+    min-width: 320px;
+}
+
+#moderators_header
+{   
+    height: 30px;
+    width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#moderators_body
+{
+    height: calc(100% - 100px);
+    width: 300px;
+}
+
+#moderators
+{   
+    height: 100%;
+    width: 100%;
+}
+
+#column_middle
+{
+    padding-top: 30px;
+    width: 500px;
+    height: 100%;
+    display: table-cell;
+    min-width: 440px;
+    vertical-align: top;
+    padding-bottom: 20px;
+}
+
+#column_middle_inner
+{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+#table_middle
+{
+    text-align: right;
+    margin: auto;
+}
+
+#table_middle td
+{
+    padding-bottom: 10px;
+}
+
+#prefix, #list_type
+{
+    width: 100%;
+}
+
+#footer
+{
+    width: 100%;
+    height: 100px;
+}
+
+#save_btn
+{
+    text-align: center;
+}
+
+.tooltip .help_sub, .tooltip .help_mod
+{
+    visibility: hidden;
+    width: 250px;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    top: 150%;
+    left: 50%;
+    margin-left: -133px;
+}
+
+.tooltip .help_sub::after, .tooltip .help_mod::after
+{
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #111 transparent;
+}
+
+.tooltip:hover .help_sub, .tooltip:hover .help_mod
+{
+    visibility: visible;
+}
+
+.tooltip .help_list_type
+{
+    visibility: hidden;
+    width: 300px;
+    background-color: #111;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px 0 6px 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    top: 3px;
+    right: 170%;
+}
+
+.tooltip .help_list_type::after
+{
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #111;
+}
+
+.tooltip:hover .help_list_type
+{
+    visibility: visible;
+}
+
+#list_type_header, #prefix_header, #footer_header, #notmetoo_header
+{
+    display: flex;
+    align-items: center;
+}
+
+.tooltip .help_prefix
+{
+    visibility: hidden;
+    width: 200px;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    top: -260%;
+    right: 160%;
+}
+
+.tooltip .help_prefix::after
+{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #111;
+}
+
+.tooltip:hover .help_prefix
+{
+    visibility: visible;
+}
+
+.tooltip .help_footer
+{
+    visibility: hidden;
+    width: 200px;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    top: -195%;
+    right: 160%;
+}
+
+.tooltip .help_footer::after
+{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #111;
+}
+
+.tooltip:hover .help_footer
+{
+    visibility: visible;
+}
+
+#notmetoo_checkbox
+{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.tooltip .help_notmetoo
+{
+    visibility: hidden;
+    width: 300px;
+    background-color: #111;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    top: -320%;
+    right: 160%;
+}
+
+.tooltip .help_notmetoo::after
+{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #111;
+}
+
+.tooltip:hover .help_notmetoo
+{
+    visibility: visible;
+}

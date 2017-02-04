@@ -1,0 +1,8 @@
+#!/bin/bash
+# 
+# mlmmj-footer-receive
+#
+# Adds the footer to incoming message
+#
+
+/usr/bin/foot_filter -P /$1/$2/control/footer-text -H /$1/$2/control/footer-html | /usr/bin/mlmmj-receive -F -L /$1/$2/
