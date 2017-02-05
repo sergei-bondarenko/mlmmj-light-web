@@ -20,7 +20,7 @@ mlmmj-light-web-master/misc/init.sh
 
 **A slightly harder way:** read init.sh code and do all manually.
 
-## Using
+## Usage
 
 Create a domain:
 
