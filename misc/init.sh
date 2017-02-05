@@ -76,12 +76,12 @@ echo
 echo
 echo "Moving files..."
 echo
-mv /tmp/mlmmj-light-web-master/misc/move/exim4.conf /etc/exim4/
-mv /tmp/mlmmj-light-web-master/misc/move/exim4.filter /etc/exim4/
-mv /tmp/mlmmj-light-web-master/misc/move/mlmmj-footer-receive /usr/bin/
-echo
+mv /tmp/mlmmj-light-web-master/misc/move/exim4.conf /etc/exim4
+mv /tmp/mlmmj-light-web-master/misc/move/exim4.filter /etc/exim4
+mv /tmp/mlmmj-light-web-master/misc/move/mlmmj-footer-receive /usr/bin
 echo "Unpacking templates..."
-tar xzvf /tmp/mlmmj-light-web-master/misc/templates.tar.gz
+echo
+tar xzvf /tmp/mlmmj-light-web-master/misc/templates.tar.gz -C /tmp/mlmmj-light-web-master/misc
 rm /tmp/mlmmj-light-web-master/misc/templates.tar.gz
 echo
 echo "Compiling foot_filter..."
@@ -90,11 +90,11 @@ make -C /tmp/mlmmj-light-web-master/misc/move/foot_filter
 echo
 echo "Moving files..."
 echo
-mv /tmp/mlmmj-light-web-master/misc/move/foot_filter/foot_filter /usr/bin/
+mv /tmp/mlmmj-light-web-master/misc/move/foot_filter/foot_filter /usr/bin
 rm -rf /tmp/mlmmj-light-web-master/misc/move
 rm -rf /tmp/mlmmj-light-web-master/misc/init.sh
 rm -rf /var/www/html/*
-cp -rp /tmp/mlmmj-light-web-master/* /var/www/html/
+cp -rp /tmp/mlmmj-light-web-master/* /var/www/html
 echo "Removing all nstallation files..."
 echo
 rm -rf /tmp/mlmmj-light-web-master
