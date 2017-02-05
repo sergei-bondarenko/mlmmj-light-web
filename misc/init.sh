@@ -79,6 +79,11 @@ echo
 mv /tmp/mlmmj-light-web-master/misc/move/exim4.conf /etc/exim4/
 mv /tmp/mlmmj-light-web-master/misc/move/exim4.filter /etc/exim4/
 mv /tmp/mlmmj-light-web-master/misc/move/mlmmj-footer-receive /usr/bin/
+echo
+echo "Unpacking templates..."
+tar xzvf /tmp/mlmmj-light-web-master/misc/templates.tar.gz
+rm /tmp/mlmmj-light-web-master/misc/templates.tar.gz
+echo
 echo "Compiling foot_filter..."
 echo
 make -C /tmp/mlmmj-light-web-master/misc/move/foot_filter
