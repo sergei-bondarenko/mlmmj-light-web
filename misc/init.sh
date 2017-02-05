@@ -76,27 +76,25 @@ echo
 echo
 echo "Moving files..."
 echo
-mv move/exim4.conf /etc/exim4/
-mv move/exim4.filter /etc/exim4/
-mv move/mlmmj-footer-receive /usr/bin/
-cd move/foot_filter
+mv /tmp/mlmmj-light-web-master/misc/move/exim4.conf /etc/exim4/
+mv /tmp/mlmmj-light-web-master/misc/move/exim4.filter /etc/exim4/
+mv /tmp/mlmmj-light-web-master/misc/move/mlmmj-footer-receive /usr/bin/
+cd /tmp/mlmmj-light-web-master/misc/move/foot_filter
 echo "Compiling foot_filter..."
 echo
 make
 echo
 echo "Moving files..."
 echo
-mv foot_filter /usr/bin/
-cd ../..
-rm -rf move
-cd ..
+mv /tmp/mlmmj-light-web-master/misc/foot_filter/foot_filter /usr/bin/
+cd /tmp
+rm -rf /tmp/mlmmj-light-web-master/misc/move
 rm -rf /var/www/html/*
-cp -rp * /var/www/html/
-cd ..
+cp -rp /tmp/mlmmj-light-web-master/* /var/www/html/
 echo "Removing installation files..."
 echo
-rm -rf mlmmj-light-web-master
-rm -rf master.tar.gz
+rm -rf /tmp/mlmmj-light-web-master
+rm -rf /tmp/master.tar.gz
 echo "Setting ownership of files..."
 echo
 chown mlmmj:mlmmj -R /var/www/html
