@@ -84,6 +84,10 @@ echo
 tar xzvf /tmp/mlmmj-light-web-master/misc/templates.tar.gz -C /tmp/mlmmj-light-web-master/misc
 rm /tmp/mlmmj-light-web-master/misc/templates.tar.gz
 echo
+echo "Unpacking smarty..."
+tar xzvf /tmp/mlmmj-light-web-master/misc/smarty.tar.gz -C /tmp/mlmmj-light-web-master/misc
+rm /tmp/mlmmj-light-web-master/misc/smarty.tar.gz
+echo
 echo "Compiling foot_filter..."
 echo
 make -C /tmp/mlmmj-light-web-master/misc/move/foot_filter
