@@ -7,6 +7,7 @@ A light php web interface to mlmmj. It does not use a database.
 ## Installation
 
 **An easy way:**
+
 1. Install a clean Debian from [netinst](https://www.debian.org/CD/netinst/) iso with only standard system utilities.
 2. Do commands:
 
@@ -18,6 +19,20 @@ mlmmj-light-web/misc/init.sh
 ```
 
 **A slightly harder way:** read init.sh code and do all manually.
+
+## Using
+
+Create a domain:
+
+```
+/var/www/html/misc/manage_domains.sh add list.example.com
+```
+
+Delete a domain:
+
+```
+/var/www/html/misc/manage_domains.sh del list.example.com
+```
 
 ## Screenshots
 
