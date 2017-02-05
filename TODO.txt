@@ -1,2 +1,0 @@
-1. english template on index.tpl
-2. structure empty folders in template_ru
