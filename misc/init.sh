@@ -48,7 +48,7 @@ sed -i '/web_url/d' /tmp/mlmmj-light-web-master/misc/config.txt
 echo "web_url = ${url}" >> /tmp/mlmmj-light-web-master/misc/config.txt
 
 echo
-echo "Updating package list..."
+echo "Updating packages list..."
 echo
 apt-get update
 echo
