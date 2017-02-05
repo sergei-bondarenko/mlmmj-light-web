@@ -1,4 +1,4 @@
 lists_path = /var/spool/mlmmj
 web_path = /var/www/html
-web_url = http://mlmmj.tk/
-language = ru
+language = en
+web_url = http://example.com/

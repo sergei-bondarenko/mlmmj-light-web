@@ -187,7 +187,7 @@
                             </table>
                         </div>
                         <div id="save_btn">
-                            <input type="submit" name="submit" value="Сохранить">
+                            <input type="submit" name="submit" value="Save">
                         </div>
                     </div>
                 </div>

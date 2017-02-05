@@ -20,8 +20,7 @@ operation=$1
 domain=$2
 
 if [ "${operation}" = "add" ]; then
-#    password=$(apg -MCLN -m 12 -a 1 -n 1)
-    password="123"
+    password=$(apg -MCLN -m 12 -a 1 -n 1)
     hash=$(echo -n $password | sha256sum | head -c 64)
     mkdir -p $lists_path/$domain
     echo $domain:$hash >> $lists_path/passwords.txt
