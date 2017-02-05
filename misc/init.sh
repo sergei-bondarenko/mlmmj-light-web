@@ -87,9 +87,10 @@ echo "Moving files..."
 echo
 mv /tmp/mlmmj-light-web-master/misc/move/foot_filter/foot_filter /usr/bin/
 rm -rf /tmp/mlmmj-light-web-master/misc/move
+rm -rf /tmp/mlmmj-light-web-master/misc/init.sh
 rm -rf /var/www/html/*
 cp -rp /tmp/mlmmj-light-web-master/* /var/www/html/
-echo "Removing installation files..."
+echo "Removing all nstallation files..."
 echo
 rm -rf /tmp/mlmmj-light-web-master
 rm -rf /tmp/master.tar.gz
