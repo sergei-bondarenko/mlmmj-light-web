@@ -99,7 +99,7 @@ rm -rf /tmp/mlmmj-light-web-master/misc/move
 rm -rf /tmp/mlmmj-light-web-master/misc/init.sh
 rm -rf /var/www/html/*
 cp -rp /tmp/mlmmj-light-web-master/* /var/www/html
-echo "Removing all nstallation files..."
+echo "Removing all installation files..."
 echo
 rm -rf /tmp/mlmmj-light-web-master
 rm -rf /tmp/master.tar.gz
