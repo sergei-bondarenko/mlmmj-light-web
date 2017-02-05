@@ -2,8 +2,9 @@
 
 function load_config()
 {
-    lists_path=$(cat config.txt | grep lists_path | sed 's/.*=//g' | sed 's/[[:blank:]]//g')
-    web_url=$(cat config.txt | grep web_url | sed 's/.*=//g' | sed 's/[[:blank:]]//g')
+    parent_path=$( cd "$(dirname "${BASH_SOURCE}")" ; pwd -P )
+    lists_path=$(cat $parent_path/config.txt | grep lists_path | sed 's/.*=//g' | sed 's/[[:blank:]]//g')
+    web_url=$(cat $parent_path/config.txt | grep web_url | sed 's/.*=//g' | sed 's/[[:blank:]]//g')
 }
 
 if [ "$#" -ne 2 ]; then
