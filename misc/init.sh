@@ -38,14 +38,14 @@ do
     esac
 done
 
-sed -i '/language/d' config.txt
-echo "language = ${lang}" >> config.txt
+sed -i '/language/d' /tmp/mlmmj-light-web-master/misc/config.txt
+echo "language = ${lang}" >> /tmp/mlmmj-light-web-master/misc/config.txt
 
 read -p "Please enter URL which you will use for mlmmj-light-web. [http://example.com/] : " url
 url=${url:-http://example.com/}
 
-sed -i '/web_url/d' config.txt
-echo "web_url = ${url}" >> config.txt
+sed -i '/web_url/d' /tmp/mlmmj-light-web-master/misc/config.txt
+echo "web_url = ${url}" >> /tmp/mlmmj-light-web-master/misc/config.txt
 
 echo
 echo "Updating package list..."
@@ -79,15 +79,13 @@ echo
 mv /tmp/mlmmj-light-web-master/misc/move/exim4.conf /etc/exim4/
 mv /tmp/mlmmj-light-web-master/misc/move/exim4.filter /etc/exim4/
 mv /tmp/mlmmj-light-web-master/misc/move/mlmmj-footer-receive /usr/bin/
-cd /tmp/mlmmj-light-web-master/misc/move/foot_filter
 echo "Compiling foot_filter..."
 echo
-make
+make -C /tmp/mlmmj-light-web-master/misc/move/foot_filter
 echo
 echo "Moving files..."
 echo
 mv /tmp/mlmmj-light-web-master/misc/foot_filter/foot_filter /usr/bin/
-cd /tmp
 rm -rf /tmp/mlmmj-light-web-master/misc/move
 rm -rf /var/www/html/*
 cp -rp /tmp/mlmmj-light-web-master/* /var/www/html/
