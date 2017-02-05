@@ -15,7 +15,7 @@ A light php web interface to mlmmj. It does not use a database.
 cd /tmp
 wget https://github.com/grez911/mlmmj-light-web/archive/master.tar.gz
 tar xzvf master.tar.gz
-mlmmj-light-web/misc/init.sh
+mlmmj-light-web-master/misc/init.sh
 ```
 
 **A slightly harder way:** read init.sh code and do all manually.

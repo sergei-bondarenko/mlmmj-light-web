@@ -95,7 +95,8 @@ cp -rp * /var/www/html/
 cd ..
 echo "Removing installation files..."
 echo
-rm -rf mlmmj-light-web
+rm -rf mlmmj-light-web-master
+rm -rf master.tar.gz
 echo "Setting ownership of files..."
 echo
 chown mlmmj:mlmmj -R /var/www/html
