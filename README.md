@@ -2,7 +2,7 @@
 
 ## Description
 
-A light php web interface to [mlmmj](http://mlmmj.org/). It does not use a database.
+A light PHP web interface to [mlmmj](http://mlmmj.org/). It does not use a database.
 
 ## Installation
 
