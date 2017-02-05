@@ -85,7 +85,7 @@ make -C /tmp/mlmmj-light-web-master/misc/move/foot_filter
 echo
 echo "Moving files..."
 echo
-mv /tmp/mlmmj-light-web-master/misc/foot_filter/foot_filter /usr/bin/
+mv /tmp/mlmmj-light-web-master/misc/move/foot_filter/foot_filter /usr/bin/
 rm -rf /tmp/mlmmj-light-web-master/misc/move
 rm -rf /var/www/html/*
 cp -rp /tmp/mlmmj-light-web-master/* /var/www/html/
