@@ -37,6 +37,6 @@ if [ "${operation}" = "del" ]; then
     else
         sed -i -e "/^${domain}:.*/d" $lists_path/passwords.txt
         rm -r $lists_path/$domain
-        echo -e "Domain $domain has deleted."
+        echo -e "Domain $domain has been deleted."
     fi
 fi
